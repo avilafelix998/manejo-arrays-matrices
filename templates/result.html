@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+</head>
+<body>
+    <h1>Listado de personas registradas:</h1>
+    <ul>
+        {% for persona in personas %}
+            <li>Nombre: {{ persona[0] }}, Edad: {{ persona[1] }}, Nota: {{ persona[2] }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Listado de personas ordenadas por nota (de mayor a menor):</h1>
+    <ul>
+        {% for persona in personas_ordenadas %}
+            <li>Nombre: {{ persona[0] }}, Edad: {{ persona[1] }}, Nota: {{ persona[2] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
