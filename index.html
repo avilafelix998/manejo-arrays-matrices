@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro de Personas</h1>
+    
+    <label for="numPersonas">Ingrese el número de personas a registrar:</label>
+    <input type="number" id="numPersonas" min="1" required>
+    <button id="iniciar">Iniciar Registro</button>
+
+    <div id="formulario" class="result" style="display:none;">
+        <h3>Registrar Persona</h3>
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+        </div>
+        <div>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" required>
+        </div>
+        <div>
+            <label for="nota">Nota:</label>
+            <input type="number" id="nota" min="0" max="10" required>
+        </div>
+        <button id="guardar">Guardar Persona</button>
+    </div>
+
+    <div id="resultadosOriginales" class="result"></div>
+    <div id="resultadosOrdenados" class="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
